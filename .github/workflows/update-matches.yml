@@ -15,7 +15,7 @@ jobs:
 
       - name: Fetch matches
         run: |
-          curl -X GET "https://v3.football.api-sports.io/fixtures?next=20" \
+          curl -X GET "https://v3.football.api-sports.io/fixtures?live=all" \
           -H "x-apisports-key: ${{ secrets.API_KEY }}" \
           -o matches.json
 
