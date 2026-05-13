@@ -27,6 +27,4 @@ jobs:
           git commit -m "update matches" || echo "No changes"
 
       - name: Push changes
-        run: |
-         git pull --rebase
-         git push
+        run: git push --force
