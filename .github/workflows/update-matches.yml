@@ -15,8 +15,8 @@ jobs:
 
       - name: Fetch matches
         run: |
-          curl -X GET "https://v3.football.api-sports.io/fixtures?date=$(date +%F)" \
-          -H "x-apisports-key: ${{ secrets.API_KEY }}" \
+          curl -X GET "https://api.football-data.org/v4/matches" \
+          -H "X-Auth-Token: ${{ secrets.API_KEY }}" \
           -o matches.json
 
       - name: Commit files
