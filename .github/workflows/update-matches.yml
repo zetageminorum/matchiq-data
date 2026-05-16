@@ -24,6 +24,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add matches.json
+          git restore --staged .github/workflows/update-matches.yml || true
           git commit -m "update matches" || echo "No changes"
 
       - name: Push changes
