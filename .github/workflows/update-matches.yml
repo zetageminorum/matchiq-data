@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Debug Time
+        run: date  
 
       - name: Fetch matches
         run: |
